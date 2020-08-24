@@ -6,7 +6,7 @@ export class Quote {
 	points: number
 	completeDate:Date
 	
-	constructor( id: number, quote: string, author: string, points?: number){	
+	constructor( public id: number, public quote: string, public author: string, public completeDate:Date, points?: number){	
 
       this.id = id;
       this.author = author;
