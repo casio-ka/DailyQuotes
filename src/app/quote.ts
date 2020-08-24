@@ -1,11 +1,17 @@
 export class Quote {
-	public upvotes:number
-	public downvotes: number
-	public completeDate:Date
+
+	id: number
+	quote : string
+	author : string
+	points: number
+	completeDate:Date
 	
-	constructor(public name: string,public author: string, public quote: string){
-      this.upvotes =0;
-      this.downvotes =0;
-      this.completeDate=new Date;
+	constructor( id: number, quote: string, author: string, points?: number){	
+
+      this.id = id;
+      this.author = author;
+      this.quote = quote;
+      this.points = points || 0;
+      this.completeDate = new Date;
     }
 }
