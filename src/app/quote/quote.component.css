@@ -1,13 +1,12 @@
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Barlow');
 
-header {
-    text-align: center;
-}
-.jumbotron {
-    color: white;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
-    font-weight: 900;
-    background-color: sienna; 
+.start {
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/aef12e98222807.5ed76ca3ccfa6.jpg")no-repeat center center;
+    background-size: cover;
+  }
 
-
+.h4 {
+    font-family: Raleway;
+    font-size: 17px;
 }

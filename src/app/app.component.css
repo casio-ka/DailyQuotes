@@ -1,12 +1,37 @@
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Barlow');
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+form{ max-width: 30em; 
+    margin: 4em auto; 
+    position: relative; 
+    background: #f4f4f4; padding: 
+    2em 3em;
+
+}
+
 header {
     text-align: center;
 }
 .jumbotron {
     color: white;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
-    font-weight: 900;
-    background-color: sienna; 
-
+    font-family:Oswald;
+    text-align: center;
+    font-size: 50px;
+    background-color: #153440; 
 
 }
+.author {
+    font-family: Raleway;
+    font-style: italic;
+}
+
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+      height: 1040px;
+    }
+  }

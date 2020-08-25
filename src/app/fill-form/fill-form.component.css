@@ -1,0 +1,24 @@
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Barlow');
+/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+form{ 
+    max-width: 25em; 
+    margin: 1em auto;
+}    
+.author {
+    font-family:Raleway ;
+    font-style: italic;
+    font-size: 15px;
+}
+.upvote {
+    font-family: Raleway;
+}
+
+.downvote {
+    font-family: Raleway;
+}
+.date {
+    font-family: Raleway;
+}

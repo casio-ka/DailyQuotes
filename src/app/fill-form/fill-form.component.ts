@@ -9,8 +9,6 @@ import { Quote } from '../quote';
 export class FillFormComponent implements OnInit {
   @Input() quote:Quote
   
-  upvotes=0;
-  downvotes=0;
 
   @Output() isComplete = new EventEmitter<boolean>();
   quoteDelete(complete:boolean){

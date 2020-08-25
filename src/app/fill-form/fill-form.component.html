@@ -1,16 +1,16 @@
 <div>
 	
-	<p>
-		Author:{{quote.author}}
+	<p class="author">
+	    - {{quote.author}}
 	</p>
-    <p>
+    <p class="upvotes">
       Upvotes:{{quote.upvotes}}
     </p>
-    <p>
+    <p class="downvotes">
       Downvotes:{{quote.downvotes}}
     </p>
 
-	<p>{{quote.completeDate|date}}</p>
+	<p class="date">{{quote.completeDate|date}}</p>
 	
 <button (click) = 'quoteDelete(true)'>Delete Quote</button>
 

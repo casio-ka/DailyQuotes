@@ -10,7 +10,6 @@ export class Quote {
       this.id = id;
       this.author = author;
       this.quote = quote;
-      this.completeDate = new Date;
       
     }
 }

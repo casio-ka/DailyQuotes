@@ -1,41 +1,37 @@
 <div class="container">
   <div class="row">
-    <app-form (addQuote)="addNewQuote($event)"></app-form>
-  </div>
-</div>
+    <div class="col-md-6 form-group">
+      <app-form (addQuote)="addNewQuote($event)"></app-form>
+    </div>
+    <div class="col-md-6">
+      <div class="QuoteList" *ngFor="let quote of quotes; let i = index">
+        <p
+          class="h4 h4-responsive"
+          appHighlight
+          *ngIf="highestUpvote() === quote.upvotes && quote.upvotes > 0"
+        >
+          {{ quote.quote }}
+        </p>
+        <p
+          class="h4 h4-responsive"
+          *ngIf="highestUpvote() !== quote.upvotes || quote.upvotes === 0"
+        >
+          {{ quote.quote }}
+        </p>
 
-<div class="container">
-  <ul>
-    <div class="QuoteList" *ngFor="let quote of quotes; let i = index">
-      <div class="tabs">
-        <div class="row">
-          <div class="col-md-12">
-            <p
-              class="h4 h4-responsive" appHighlight
-              *ngIf="highestUpvote() === quote.upvotes && quote.upvotes > 0"
-            >
-              {{ quote.quote }}
-            </p>
-            <p
-              class="h4 h4-responsive"
-              *ngIf="highestUpvote() !== quote.upvotes || quote.upvotes === 0"
-            >
-              {{ quote.quote }}
-            </p>
-
-            <app-fill-form
-              [quote]="quote"
-              (isComplete)="deleteQuote($event, i)"
-            ></app-fill-form>
-            <button class="link-black btn btn-sm btn-success" (click)="upvote(i)"><i class="fa fa-thumbs-o-up margin-r-5"></i>
-              Upvote
-            </button>
-            <button class="link-black btn btn-danger btn-sm" (click)="downvote(i)"><i class="fa fa-thumbs-o-down margin-r-5"></i>
-              Downvote
-            </button>
-          </div>
-        </div>
+        <app-fill-form
+          [quote]="quote"
+          (isComplete)="deleteQuote($event, i)"
+        ></app-fill-form>
+        <button class="link-black btn btn-sm btn-success" (click)="upvote(i)">
+          <i class="fa fa-thumbs-o-up margin-r-5"></i>
+          Upvote
+        </button>
+        <button class="link-black btn btn-danger btn-sm" (click)="downvote(i)">
+          <i class="fa fa-thumbs-o-down margin-r-5"></i>
+          Downvote
+        </button>
       </div>
     </div>
-  </ul>
+  </div>
 </div>

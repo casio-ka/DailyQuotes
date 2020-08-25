@@ -12,18 +12,20 @@ export class QuoteComponent implements OnInit {
       1,
       "Innovation distinguishes between a leader and a follower",
       "Steve Jobs",
-      new Date(2018.09, 20)
+      new Date(2018.20, 12)
     ),
+    
     new Quote(
       2,
-      "I learned not to worry so much about the outcome, but to concentrate on the step I was on and to try to do it as perfectly as I could when I was doing it.",
-      "Steve Wozniak",
+      "The way to get started is to quit talking and begin doing.",
+      "Walt Disney",
       new Date(2018.11, 11)
     ),
+
     new Quote(
       3,
-      "Always wake up with a smile knowing that today you are going to have fun accomplishing what others are too afraid to do.",
-      "Mark cuban",
+      "Life is what happens when you're busy making other plans.",
+      "John Lennon",
       new Date(2019.01, 28)
     ),
   ];
