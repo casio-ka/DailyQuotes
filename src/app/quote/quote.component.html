@@ -27,10 +27,10 @@
               [quote]="quote"
               (isComplete)="deleteQuote($event, i)"
             ></app-fill-form>
-            <button class="btn btn-primary" (click)="upvote(i)">
+            <button class="link-black btn btn-sm btn-success" (click)="upvote(i)"><i class="fa fa-thumbs-o-up margin-r-5"></i>
               Upvote
             </button>
-            <button class="btn btn-primary" (click)="downvote(i)">
+            <button class="link-black btn btn-danger btn-sm" (click)="downvote(i)"><i class="fa fa-thumbs-o-down margin-r-5"></i>
               Downvote
             </button>
           </div>
