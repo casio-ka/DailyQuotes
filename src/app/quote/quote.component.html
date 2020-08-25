@@ -1,12 +1,34 @@
-<div>
-  <h1>Daily Quotes</h1>
-  <hr>
+<div class="container">
+  <div class="row">
+    <app-form (addQuote)="addNewQuote($event)"></app-form>
+  </div>
+</div>
+
+<div class="container">
   <ul>
-    <li *ngFor='let quote of quotes'>
-      {{quote.quote}} 
-      	<p>
-      		{{quote.author}}
-      	</p>		
-    </li>
+    <div class="QuoteList" *ngFor= 'let quote of quotes ; let i= index'>
+      <div class="tabs">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="h3 h3-responsive" data-wow-delay="1s" appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
+				{{quote.quote}}
+			</p>
+			<p class="h3 h3-responsive" data-wow-delay="1s" *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}
+			</p>
+
+            <app-fill-form
+              [quote]='quote'
+              (isComplete)= 'deleteQuote($event,i)'
+            ></app-fill-form>
+            <button class="btn btn-primary" (click)="upvote(i)">
+              Upvote 
+            </button>
+            <button class="btn btn-primary" (click)="downvote(i)">
+              Downvote
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </ul>
 </div>
